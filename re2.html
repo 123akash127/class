@@ -1,0 +1,40 @@
+<html>
+    <form>
+     <div ng-app="">
+        <input type="text" placeholder="username" id="username" ng-model="username">
+        <!-p ng-bind="username">
+        <p>{{username}}</p>
+        </div-->
+        <input type="text" placeholder="password" id="password">
+        <div>
+        </div>
+        <input type="radio" name="male">male
+        <input type="radio" name="male">female
+        <input type="radio" name="male">others
+        <div></div>
+        <label>address</label>
+        <textarea name="address" row="10" cols="10"></textarea>
+        <div></div>
+        <button onclick="validate()">submit</button>
+        <div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+</div>
+    </form>
+     
+    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> 
+        function validate(){
+            var name=document.getElementById("username");
+            var pass=document.getElementById("password");
+          document.write("username:$(name.validate)\n password:$(pass.validate)");
+          if(name.validate=="akash" && pass.validate=="adesh")
+          {
+              alert("login sucessfull");
+          }
+          else{
+              alert("Invaild input");
+          }
+        }
+            </script>
+</html>
